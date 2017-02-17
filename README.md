@@ -32,7 +32,6 @@ Voir la [LICENCE](https://github.com/Ludovic-Andiveau/quiz/blob/master/LICENSE).
 # 3. Etat du projet
 
 Le projet pour l’instant est encore « brut », il n’est pas totalement dynamique, nous avons des variables en brutes pour générer notre Quiz et nos réponses.
-And repeat
 
 
 # 4. Mise en place, prérequis, utilisation rapide
@@ -53,11 +52,11 @@ C’est la version que nous avons utilisée et c’est aussi la version minimale
 ## Softs à installer
 
 Pour utiliser notre projet il vous faudra au préalable télécharger et installer ces différents logiciels :
-```
+
 *	Microsoft Visual Studio Ultimate 2013 Version 12.0.31101.00 Update 4 ;
-*   Leap Motion SDK v2.3.1 que vous pouvez télécharger [ici](https://developer.leapmotion.com/sdk/v2/). 
-*	Ajout de la référence Projet : LeapCSharp.NET4.0
-```
+*   Leap Motion SDK v2.3.1 que vous pouvez télécharger [ici](https://developer.leapmotion.com/sdk/v2/) ; 
+*	Ajout de la référence Projet : LeapCSharp.NET4.0.
+
 
 Attention : Pour intégrer votre SDK il faudra renseigner le chemin où se trouve celui-ci.
 Pour cela il vous faudra ajouter une variable d’environnement système « LEAP_SDK » pointant sur votre SDK.
