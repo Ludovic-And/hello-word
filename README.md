@@ -9,7 +9,7 @@ Ce projet remplit différentes fonctionnalités :
 
 Résultat obtenu :
 
-![final_result](Ludovic-Andiveau.github.com/hello-word/final_result.png "Interface finale via terminal")
+![final_result](https://github.com/Ludovic-Andiveau/hello-word/blob/master/final_result.png "Interface finale via terminal")
 
 
 ## Getting Started
