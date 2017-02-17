@@ -1,98 +1,90 @@
 # 1. QuizLeapProject 
 
 Ce projet remplit différentes fonctionnalités :
-* Détecter les mouvements d’une main ;
-* Assigner une valeur (dans notre cas une réponse) par rapport à la position de la main ;
-* Créer des zones neutres pour bien séparer les zones de réponses (voir schéma plus bas) ;
-* Proposer un quiz brut comprenant une liste de quatre questions fermées ayant quatre choix de réponses ;
-* Switcher de question quand la réponse donnée est correcte.
+*   Détecter les mouvements d’une main ;
+*   Assigner une valeur (dans notre cas une réponse) par rapport à la position de la main ;
+*   Créer des zones neutres pour bien séparer les zones de réponses (voir schéma plus bas) ;
+*   Proposer un quiz brut comprenant une liste de quatre questions fermées ayant quatre choix de réponses ;
+*   Switcher de question quand la réponse donnée est correcte.
 
 Résultat obtenu :
 
 ![final_result](https://github.com/Ludovic-Andiveau/hello-word/blob/master/final_result.png "Interface finale via terminal")
 
 
-## Getting Started
+# 2. Auteurs et copyright
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Auteurs
 
-### Prerequisites
+Les auteurs de ce projet sont : CIVEL Bastien et ANDIVEAU Ludovic. Ce sont tous les deux des élèves de 5e année en Ingénieur du numérique à l’ESAIP.
 
-What things you need to install the software and how to install them
 
-```
-Give examples
-```
+* [Civel Bastien](https://github.com/BastienCivel) - Github de Bastien.
+* [ANDIVEAU Ludovic](https://github.com/Ludovic-Andiveau/) - Github de Ludovic.
 
-### Installing
 
-A step by step series of examples that tell you have to get a development env running
+Vous trouverez aussi la liste de tous les [contributeurs](https://github.com/Ludovic-Andiveau/quiz/graphs/contributors) qui ont participé au projet.
 
-Say what the step will be
+### Copyright
 
-```
-Give the example
-```
+Voir la [LICENCE](https://github.com/Ludovic-Andiveau/quiz/blob/master/LICENSE).
 
+# 3. Etat du projet
+
+Le projet pour l’instant est encore « brut », il n’est pas totalement dynamique, nous avons des variables en brutes pour générer notre Quiz et nos réponses.
 And repeat
 
+
+# 4. Mise en place, prérequis, utilisation rapide
+
+## Matériels utilisés
+
+LEAP MOTION
+
+![leap_motion](https://github.com/Ludovic-Andiveau/hello-word/blob/master/leap_motion.jpg "Leap motion connecté au pc.")
+
+La LEAP motion nous a été prêtée par notre intervenant et il nous a été possible de l’utiliser à l’extérieur de l’enceinte de l’ESAIP, nous permettant de continuer notre projet chez nous.
+
+
+PC Windows 8.1 64bits
+
+C’est la version que nous avons utilisée et c’est aussi la version minimale de Windows à avoir pour pouvoir utiliser le logiciel : Microsoft Visual Studio Ultimate 2013 Version 12.0.31101.00 Update 4.
+
+## Softs à installer
+
+Pour utiliser notre projet il vous faudra au préalable télécharger et installer ces différents logiciels :
 ```
-until finished
+*	Microsoft Visual Studio Ultimate 2013 Version 12.0.31101.00 Update 4 ;
+*   Leap Motion SDK v2.3.1 que vous pouvez télécharger [ici](https://developer.leapmotion.com/sdk/v2/). 
+*	Ajout de la référence Projet : LeapCSharp.NET4.0
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Attention : Pour intégrer votre SDK il faudra renseigner le chemin où se trouve celui-ci.
+Pour cela il vous faudra ajouter une variable d’environnement système « LEAP_SDK » pointant sur votre SDK.
 
-## Running the tests
+![variable_environnement](https://github.com/Ludovic-Andiveau/hello-word/blob/master/variable_environnement.png "Ajout variable environnement.")
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Puis cliquez sur l’onglet PROJET, dans la liste déroulante sélectionnez « Propriétés de NomDuProjet ». Ensuite dans « Evénements de build » ajouté la ligne ci-dessous :
 
 ```
-Give an example
+xcopy /yr "C:\LeapMotionSDK\lib\x64\Leap.dll" "$(TargePath)"xcopy /yr "C:\LeapMotionSDK\lib\x64\LeapCSharp.dll" "$(TargetPath)"
 ```
 
-### And coding style tests
+![prorietes_projet](https://github.com/Ludovic-Andiveau/hello-word/blob/master/prorietes_projet.png "Modification propriétés du projet.")
 
-Explain what these tests test and why
+## Utilisation
 
-```
-Give an example
-```
+Pour répondre à la question une fois le programme lancé, il suffit à l’utilisateur de placer sa main dans une des zones de réponse. 
 
-## Deployment
+![schema_zones](https://github.com/Ludovic-Andiveau/hello-word/blob/master/schema_zones.JPG "Schema des zones de réponses.")
 
-Add additional notes about how to deploy this on a live system
+# 5. License
 
-## Built With
+Ce projet est sous la license MIT - voir le fichier [LICENSE.md](https://github.com/Ludovic-Andiveau/quiz/blob/master/LICENSE) pour plus de détails.
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+# 6. Contribution, améliorations possibles
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+Voici une liste d’améliorations qui permettrait de faire progresser notre projet : 
+*   Zones personnalisables calculées à l’aide d’un algorithme hébergé sur un Service. C’est-à-dire qu’il y aurait une initialisation au lancement du quiz, où le joueur choisirait ses zones de réponses.
+*   Mettre en place un changement de questions, pour l’instant celui-ci ne s’effectue que lorsqu’une bonne réponse a été donnée. 
 
